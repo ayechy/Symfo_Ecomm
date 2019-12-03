@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block title %}Create{% endblock %}
+{% block body %}
+
+
+<br><br>
+ <center>
+     <h1><b>
+
+Ajouter un nouveau article  
+     </b></h1>
+
+</center>
+<br><br>
+<div class = "container">
+
+{{ form_start(form) }}
+
+{{ form_widget(form.title, {'attr':{'placeholder':"Titre de l'article"}}) }}<br>
+{{ form_widget(form.description, {'attr':{'placeholder':"Description"}}) }}<br>
+{{ form_widget(form.price, {'attr':{'placeholder':"Prix"}}) }}<br>
+{{ form_widget(form.img, {'attr':{'placeholder':"insérer une image "}}) }}<br>
+
+
+<div class="container">
+<h4>Produit soldé (Oui/Non)</h4>
+<input type="radio" name="remise">Oui<br>
+<input type="radio" name="remise">Non
+</div>
+
+<button class="btn btn-info btn-block" type="submit">Enregister le produit</button>
+{{ form_end(form) }}
+
+</div>
+
+{% endblock %}
+
